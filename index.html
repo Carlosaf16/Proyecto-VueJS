@@ -6,10 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <div id="app"></div>
+    <nav class="sidebar">
+      <header>
+        <div class="image-text">
+          <span class="immagen">
+            <!-- PONER LOGO -->
+          <img src="IMAGENES/OIP.jpg" alt="">
+          </span>
+          <div class="texto texto-header">
+            <span class="nombre">NOMBRE</span>
+            <span class="profesion">PROGRAMADOR</span>
+          </div>
+        </div>
+        <i class='bx bx-chevron-right toggle'></i>
+      </header>
+      <div class="barra-menu">
+        <div class="menu"></div>
+        <li class="buscador">
+          <a href="#">
+            <i class='bx bx-search icono' ></i>
+            <input type="text" placeholder="Buscar...">
+          </a>
+        </li>
+          <ul class="links-menu">
+            <li class="link-nav">
+              <a href="#">
+                <i class='bx bx-home-alt icono' ></i>
+                <span class="texto texto-nav">Inicio</span>
+              </a>
+            </li>
+            <li class="link-nav">
+              <a href="#">
+                <i class='bx bx-home-alt icono' ></i>
+                <span class="texto texto-nav">Inicio</span>
+              </a>
+            </li>
+            <li class="link-nav">
+              <a href="#">
+                <i class='bx bx-home-alt icono' ></i>
+                <span class="texto texto-nav">Inicio</span>
+              </a>
+            </li>
+            <li class="link-nav">
+              <a href="#">
+                <i class='bx bx-home-alt icono' ></i>
+                <span class="texto texto-nav">Inicio</span>
+              </a>
+            </li>
+            <li class="link-nav">
+              <a href="#">
+                <i class='bx bx-home-alt icono' ></i>
+                <span class="texto texto-nav">Inicio</span>
+              </a>
+            </li>
+            <li class="link-nav">
+              <a href="#">
+                <i class='bx bx-home-alt icono' ></i>
+                <span class="texto texto-nav">Inicio</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <div class="bottom">
+        <li class="">
+          <a href="#">
+            <i class="bx bx-log-out icono"></i>
+            <span class="texto texto-nav">Logout</span>
+          </a>
+        </li>
+        <li class="modo">
+          <div class="luz-oscuro">
+            <i class="bx bx-moon icono"></i>
+            <i class="bx bx-sun icono"></i>
+          </div>
+          <span class="texto-modo texto">Modo Oscuro</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </nav>
     <script type="module" src="/src/main.ts"></script>
-    <h1 class="h1a">Proyecto Vue-JS</h1>
   </body>
 </html>
