@@ -9,28 +9,27 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <nav class="sidebar">
+    <nav class="sidebar cerrar">
       <header>
-        <div class="image-text">
+        <div class="texto-imagen">
           <span class="immagen">
-            <!-- PONER LOGO -->
-          <img src="IMAGENES/OIP.jpg" alt="">
+          <img src="IMAGENES/Bikers.png" alt="logo">
           </span>
           <div class="texto texto-header">
-            <span class="nombre">NOMBRE</span>
-            <span class="profesion">PROGRAMADOR</span>
+            <span class="nombre">BIKERS</span>
+            <span class="descripcion">Registra tus entrenos</span>
           </div>
         </div>
         <i class='bx bx-chevron-right toggle'></i>
       </header>
       <div class="barra-menu">
-        <div class="menu"></div>
-        <li class="buscador">
-          <a href="#">
-            <i class='bx bx-search icono' ></i>
-            <input type="text" placeholder="Buscar...">
-          </a>
-        </li>
+        <div class="menu">
+          <li class="buscador">
+            <a href="#">
+              <i class='bx bx-search icono' ></i>
+              <input type="text" placeholder="Buscar...">
+            </a>
+          </li>
           <ul class="links-menu">
             <li class="link-nav">
               <a href="#">
@@ -69,26 +68,28 @@
               </a>
             </li>
           </ul>
-      </div>
-      <div class="bottom">
-        <li class="">
-          <a href="#">
-            <i class="bx bx-log-out icono"></i>
-            <span class="texto texto-nav">Logout</span>
-          </a>
-        </li>
-        <li class="modo">
-          <div class="luz-oscuro">
-            <i class="bx bx-moon icono"></i>
-            <i class="bx bx-sun icono"></i>
-          </div>
-          <span class="texto-modo texto">Modo Oscuro</span>
-          <div class="toggle-switch">
-            <span class="switch"></span>
-          </div>
-        </li>
+        </div>
+        <div class="bottom">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-log-out icono"></i>
+              <span class="texto texto-nav">Logout</span>
+            </a>
+          </li>
+          <li class="modo">
+            <div class="claro-oscuro">
+              <i class="bx bx-moon icono luna"></i>
+              <i class="bx bx-sun icono sol"></i>
+            </div>
+            <span class="texto-modo texto">Modo<br>Oscuro</span>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
       </div>
     </nav>
+    <script src="script.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

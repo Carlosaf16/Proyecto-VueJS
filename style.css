@@ -11,12 +11,12 @@
     /*------------COLORES-------------*/
     --body-color:#E4E9F7;
     --sidebar-color:#FFF;
-    --primary-color: #133bf1;
+    --primary-color: rgba(217,217,217,255);
     --primary-color-light:#F6F5FF;
     --toggle-color:#DDD;
     --text-color:#707070;
     
-    /*------------TRANSICION-------------*/
+    /*------------TRANSICIONES-------------*/
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
@@ -26,7 +26,10 @@
 .sidebar .texto{
     font-size: 16px;
     font-weight: 500;
+    padding: 5px;
     color: var(--text-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
 }
 
 .sidebar.imagen{
@@ -35,10 +38,47 @@
     align-items: center;
 }
 
+/*-------------MODO OSCURO-----------------*/
+body.oscuro{
+    --body-color:#18191A;
+    --sidebar-color:#242526;
+    --primary-color: rgba(84,84,84,255);
+    --primary-color-light:rgba(84,84,84,255);
+    --toggle-color:#FFF;
+    --text-color:#FFF;
+}
+
+.sidebar.cerrar header .toggle{
+    transform: rotate(180deg);
+    color: var(--text-color);
+}
+
+body.oscuro .sidebar header .toggle{
+    transform: rotate(180deg);
+    color: var(--text-color);
+}
+
+body.oscuro .sidebar li a:hover .icono,
+body.oscuro .sidebar li a:hover .texto{
+    color: var(--text-color);
+}
+
+body.oscuro .sidebar.cerrar header .toggle{
+    transform: translateY(-50%);
+}
+
+body.oscuro .barra-menu .modo i.sol{
+    opacity: 1;
+}
+
+body.oscuro .barra-menu .modo i.luna{
+    opacity: 0;
+}
 /*------------SIDEBAR-------------*/
 body{
     height: 100vh;
     background: var(--body-color);
+    transition: var(--tran-04);
 }
 
 .sidebar{
@@ -49,6 +89,14 @@ body{
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
+}
+
+.sidebar.cerrar{
+    width: 88px;
+}
+
+.sidebar.cerrar .texto {
+    opacity: 0;
 }
 
 .sidebar li{
@@ -65,7 +113,6 @@ body{
     justify-content: center;
     min-width: 60px;
     font-size: 20px;
-    
 }
 
 .sidebar li .icono,
@@ -78,17 +125,17 @@ body{
     position:relative;
 }
 
-.sidebar .image-text img{
+.sidebar .texto-imagen img{
     width: 40px;
     border-radius: 6px;
 }
 
-.sidebar header .image-text{
+.sidebar header .texto-imagen{
     display: flex;
     align-items: center;   
 }
 
-header .image-text .texto-header{
+header .texto-imagen .texto-header{
     display: flex;
     flex-direction: column;
 }
@@ -96,7 +143,7 @@ header .image-text .texto-header{
 .texto-header .nombre{
     font-weight: 600;
 }
-.texto-header .prifesion{
+.texto-header .descripcion{
     margin-top: -2px;
 }
 
@@ -104,7 +151,7 @@ header .image-text .texto-header{
     position: absolute;
     top:50%;
     right: -25px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
     background: var(--primary-color);
@@ -114,10 +161,16 @@ header .image-text .texto-header{
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
+    transition: var(--tran-03);
+}
+
+.sidebar.cerrar header .toggle{
+    transform: translateY(-50%);
 }
 
 .sidebar .buscador{
     background: var(--primary-color-light);
+    border-radius: 6px;
 }
 
 .buscador input{
@@ -146,4 +199,71 @@ header .image-text .texto-header{
 .sidebar li a:hover .icono,
 .sidebar li a:hover .texto{
     color: var(--primary-color-light);
+}
+
+.sidebar .barra-menu{
+    height: calc(100% -50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .barra-menu .bottom{
+    margin-top: 300px;
+}
+
+.barra-menu .modo{
+    background: var(--primary-color-light);
+    position: relative;
+    border-radius: 6px;
+}
+
+.barra-menu .modo .claro-oscuro{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-menu .modo i{
+    position: absolute;
+}
+
+.barra-menu .modo i.sol{
+    opacity: 0;
+}
+/*BUSCAR FORMA DE QUE EL SWITCH NO SE VEA POR ENCIMA DEL TEXTO SIN <br>*/
+.barra-menu .modo .toggle-switch{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--toggle-color);
+}
+
+.switch::before{
+    content:'';
+    position: absolute;
+    height: 15px;  
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+body.oscuro .switch::before{
+    left: 25px;
 }
