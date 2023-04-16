@@ -161,7 +161,8 @@ header .texto-imagen .texto-header{
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
-    transition: var(--tran-03);
+    transition: var(--tran-05);
+    z-index: 100;
 }
 
 .sidebar.cerrar header .toggle{
@@ -266,4 +267,25 @@ header .texto-imagen .texto-header{
 
 body.oscuro .switch::before{
     left: 25px;
+}
+
+/*--------------------SECTION INICIO---------------------*/
+
+.inicio{
+    margin-top: 25px;
+    position:relative;
+    left: 500px;
+    width: calc(100% -250px);
+    transform: var(--tran-05);
+}
+
+.sidebar.cerrar ~.inicio{
+    left: 88px;
+    width: calc(100% -88px);
+}
+
+.imicio .respon-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
