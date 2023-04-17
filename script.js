@@ -4,7 +4,7 @@ const body = document.querySelector("body"),
       toggle = body.querySelector(".toggle"),
       botonBuscar = body.querySelector(".buscador"),
       modoSwitch = body.querySelector(".toggle-switch"),
-      modoTexto = body.querySelector(".modo-texto");
+      modoTexto = body.querySelector(".texto-modo");
       
       toggle.addEventListener("click", () =>{
         sidebar.classList.toggle("cerrar");
@@ -13,11 +13,11 @@ const body = document.querySelector("body"),
       modoSwitch.addEventListener("click", () =>{
         body.classList.toggle("oscuro");
 
-        /*ARREGLAR PARA QUE CAMBIE*/
         if(body.classList.contains("oscuro")){
-            modoTexto.innerText = "Modo Claro"
+          modoTexto.innerText = "Modo Claro";
         }
         else{
-            modoTexto.innerText = "Modo Oscuro"
+          modoTexto.innerHTML = "Modo<br>Oscuro";
         }
       });
+
