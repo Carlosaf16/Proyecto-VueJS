@@ -21,27 +21,18 @@ const body = document.querySelector("body"),
         }
       });
 
-      function openCity(cityName, elmnt, color) {
-        // Hide all elements with class="tabcontent" by default */
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
       
-        // Remove the background color of all tablinks/buttons
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
-        }
-      
-        // Show the specific tab content
-        document.getElementById(cityName).style.display = "block";
-      
-        // Add the specific color to the button used to open the tab content
-        elmnt.style.backgroundColor = color;
-      }
-      
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
 
+
+
+    /*---Contactos---*/
+
+    export default {
+      data: () => ({
+        cards: [
+          { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 },
+          { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
+          { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 }
+        ]
+      })
+    }
