@@ -304,3 +304,27 @@ body.oscuro .switch::before{
     left: 88px;
     width: calc(100% -88px);
 }
+
+.tablink {
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-weight: 600;
+    width: 18.4%;
+}
+
+.tablink:hover {
+    background-color: var(--primary-color-light);
+}
+
+.tabcontent {
+    color: var(--body-color);
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
