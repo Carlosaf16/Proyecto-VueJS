@@ -323,8 +323,44 @@ body.oscuro .switch::before{
 }
 
 .tabcontent {
-    color: var(--body-color);
+    color: var(--text-color);
     display: none;
     padding: 50px;
     text-align: center;
+    width: 73.6%;
 }
+
+.tabcontent .texto a{
+    margin-top: 35px;
+    text-align: center;
+    width: 100%;
+    color: var(--text-color);
+}
+
+#Noticias {background-color:var(--sidebar-color);}
+#Tiempo {background-color:var(--sidebar-color);}
+#Comunidad {background-color:var(--sidebar-color);}
+#aaaa {background-color:var(--sidebar-color);}
+
+.n1{
+    border: 2px solid var(--primary-color-light);
+    border-radius: 6px;
+    width: 33.3%;
+}
+
+.n2{
+    border: 2px solid var(--primary-color-light);
+    border-radius: 6px;
+}
+
+.n3{
+    border: 2px solid var(--primary-color-light);
+    border-radius: 6px;
+}
+
+.n1, .n2, .n3{
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+}
+
