@@ -285,8 +285,8 @@ body.oscuro .switch::before{
 }
 
 .inicio .banner {
-    height: 650px;
-    width: 1400px;
+    width: 73.6%;
+    /*min-width: 1400px;*/
     height: auto;
     border-radius: 6px;
 }
@@ -345,22 +345,25 @@ body.oscuro .switch::before{
 .n1{
     border: 2px solid var(--primary-color-light);
     border-radius: 6px;
-    width: 33.3%;
+    width: 33%;
 }
 
 .n2{
     border: 2px solid var(--primary-color-light);
     border-radius: 6px;
+    width: 33%;
 }
 
 .n3{
     border: 2px solid var(--primary-color-light);
     border-radius: 6px;
+    width: 33%;
 }
 
 .n1, .n2, .n3{
+    margin-top: 15px;
     display: inline-block;
     vertical-align: top;
-    width: 33%;
+    padding: auto;
 }
 
