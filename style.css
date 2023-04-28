@@ -316,7 +316,7 @@ body.oscuro .switch::before{
     padding: 14px 16px;
     font-size: 17px;
     font-weight: 600;
-    width: 18.4%;
+    width: 24.54%;
 }
 
 .tablink:hover {
@@ -374,7 +374,7 @@ body.oscuro .switch::before{
     border: 2px solid var(--primary-color-light);
     border-radius: 6px;
     position: relative;
-    width: 400px;
+    width: 35%;
     height: 105px;
     padding: 28px 32px;
     overflow: hidden;
@@ -402,7 +402,7 @@ body.oscuro .switch::before{
 }
 
 .buscador-tiempo input::placeholder{
-    background: var(--sidebar-color);
+    background: var(--primary-color-light);
 }
 
 .buscador-tiempo button{
@@ -410,8 +410,124 @@ body.oscuro .switch::before{
     outline: none;
     border: none;
     color: var(--text-color);
+    height: 30px;
+    width: 30px;
     background: var(--sidebar-color);
 }
 
+.buscador-tiempo button:hover{
+    background: var(--primary-color-light);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
 
+.buscador-tiempo i button{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 28px;
+}
 
+.caja-tiempo{
+    text-align: center;
+}
+
+.caja-tiempo img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+.caja-tiempo.tempreratura{
+    position: relative;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+.caja-tiempo.caja-tiempo.tempreratura span{
+    position:relative;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.caja-tiempo.descripcion{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.detalles-tiempo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.detalles-tiempo .humedad, .detalles-tiempo .viento{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+.detalles-tiempo .humedad{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.detalles-tiempo .viento{
+    padding-left: 20px;
+    justify-content: flex-end;
+}
+
+.detalles-tiempo i{
+    font-size: 22px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.detalles-tiempo span{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.detalles-tiempo p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.no-encontrado{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.no-encontrado img{
+    width: 70%; 
+}
+
+.no-encontrado p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.caja-tiempo, .detalles-tiempo{
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
