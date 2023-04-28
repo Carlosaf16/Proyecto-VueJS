@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Complex Marker Icons</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+     
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: { lat: 40.41692905261635, lng:  -3.6946545947301526 },
+        });
+
+        setMarkers(map);
+      }
+
+     
+      const beaches = [
+
+        ["Villafranca de la Sierra", 40.498446136707635, -5.230275072328321, 5],
+        ["San Agustin De Guadalix", 40.6788095837778, -3.616198606018819, 5],
+        ["Moralzarzal", 40.67700417308894, -3.966123566323908, 5],
+        ["Puerto de Mijares", 40.3321064947298, -4.814338659564157, 5],
+        ["Puerto de Navacerrada y Cotos", 40.78924530285741, -4.003439485018411, 5],
+        ["Puerto de Canencia y Morcuera", 40.82857954361304, -3.831931425289613, 4],
+        ["Alto de Abantos", 40.61646570918979, -4.175504094319652, 3],
+        ["Guadarrama", 40.67365397106177, -4.08290747321103, 2],
+        ["Plataforma de Gredos", 40.27768598212523, -5.231662390161408, 1],
+      ];
+
+      function setMarkers(map) {
+        
+        const image = {
+          url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+         
+          size: new google.maps.Size(20, 32),
+      
+          origin: new google.maps.Point(0, 0),
+         
+          anchor: new google.maps.Point(0, 32),
+        };
+       
+        const shape = {
+          coords: [1, 1, 1, 20, 18, 20, 18, 1],
+          type: "poly",
+        };
+
+        for (let i = 0; i < beaches.length; i++) {
+          const beach = beaches[i];
+
+          new google.maps.Marker({
+            position: { lat: beach[1], lng: beach[2] },
+            map,
+            icon: image,
+            shape: shape,
+            title: beach[0],
+            zIndex: beach[3],
+          });
+        }
+      }
+
+      window.initMap = initMap;
+    </script>
+    <style>
+     
+      #map {
+        height: 100%;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtITGImUNsIXn031yXmlsN3oB7ByWbWsc&callback=initMap&v=weekly" defer></script>
+  </body>
+</html>
