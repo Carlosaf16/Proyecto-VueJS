@@ -7,6 +7,7 @@
     <title>BIKERS</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="">
     <link rel="shortcut icon" href="IMAGENES/favicon.ico" type="image/x-icon">
   </head>
   <body>
@@ -97,7 +98,6 @@
           <button class="tablink" onclick="openCity('Noticias')" id="defaultOpen">Noticias</button>
           <button class="tablink" onclick="openCity('Tiempo')">Tiempo</button>
           <button class="tablink" onclick="openCity('Comunidad')">Comunidad</button>
-          <button class="tablink" onclick="openCity('aaaa')">...</button>
 
           <div id="Noticias" class="tabcontent">
             <div class="texto">
@@ -124,14 +124,38 @@
           
           <div id="Tiempo" class="tabcontent">
             <div class="texto">
-              <h1>Seleccione su ciudad</h1>
-              <select name="Ciudad" class="">
-                <option value="1">Madrid</option>
-                <option value="2">Barcelona</option>
-                <option value="3">Valencia</option>
-                <option value="4">Sevilla</option>
-                <option value="5">Galcia</option>
-              </select>
+              <div class="tarjeta">
+                <div class="buscador-tiempo">
+                  <i class='fa-solid fa-location-dot'></i>
+                  <input type="text"  placeholder="Introduzca su ciudad...">
+                  <button class="fa-solid fa-magnifying-glass"></button>
+                </div>
+                <div class="no-encontrado">
+                  <h1>Se ha producido un error :/</h1>
+                  <h2>Vuelva a realizar su busqueda</h2>
+                </div>
+                <div class="caja-tiempo">
+                  <img src="">
+                  <p class="temperatura"></p>
+                  <p class="descripcion"></p>
+                </div>
+                <div class="detalles-tiempo">
+                  <div class="humedad">
+                    <i class='bx bx-droplet'></i>
+                    <div class="texto">
+                      <span></span>
+                      <p>Humedad</p>
+                    </div>
+                  </div>
+                  <div class="viento">
+                    <i class='bx bx-wind'></i>
+                    <div class="texto">
+                      <span></span>
+                      <p>Rachas de viento</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -141,18 +165,11 @@
               <p>London is the capital city of England.</p>
             </div>
           </div>
-          
-          <div id="aaaa" class="tabcontent">
-            <div class="texto">
-              <h1>...</h1>
-              <p>...</p>
-            </div>
-          </div>
-          
         </div>
       </div>
     </section>
     <script src="script.js"></script>
     <script type="module" src="/src/main.ts"></script>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
   </body>
 </html>
