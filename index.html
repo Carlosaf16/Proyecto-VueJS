@@ -123,39 +123,30 @@
           </div>
           
           <div id="Tiempo" class="tabcontent">
-            <div class="texto">
-              <div class="tarjeta">
-                <div class="buscador-tiempo">
-                  <i class='fa-solid fa-location-dot'></i>
-                  <input type="text"  placeholder="Introduzca su ciudad...">
-                  <button class="fa-solid fa-magnifying-glass"></button>
-                </div>
-                <div class="no-encontrado">
-                  <img src="IMAGENES/404.png" alt="">
-                  <h4>Se ha producido un error :/</h4>
-                </div>
-                <div class="caja-tiempo">
-                  <img src="">
-                  <p class="temperatura"></p>
-                  <p class="descripcion"></p>
-                </div>
-                <div class="detalles-tiempo">
-                  <div class="humedad">
-                    <i class='bx bx-droplet'></i>
-                    <div class="texto">
-                      <span></span>
-                      <p>Humedad</p>
-                    </div>
-                  </div>
-                  <div class="viento">
-                    <i class='bx bx-wind'></i>
-                    <div class="texto">
-                      <span></span>
-                      <p>Rachas de viento</p>
-                    </div>
-                  </div>
-                </div>
+            <div class="weather-content">
+              <h1>Buscador del clima</h1>
+              <div class="result">
+                  <p>Agrege cuidad y pais</p>
+                  <!-- <h5>Clima en Bogota</h5>
+                  <img src="" alt="">
+                  <h2>28°C</h2>
+                  <p>Max: 29°C</p>
+                  <p>Min: 27°C</p> -->
               </div>
+              <form action="" method="POST" class="get-weather">
+                  <input type="text" name="city" id="city" placeholder="Write your city...">
+                  <select name="" id="country">
+                      <option disabled selected value="">Select the country</option>
+                      <option value="AR">Argentina</option>
+                      <option value="CO">Colombia</option>
+                      <option value="CR">Costa Rica</option>
+                      <option value="ES">España</option>
+                      <option value="US">Estados Unidos</option>
+                      <option value="MX">México</option>
+                      <option value="PE">Perú</option>
+                  </select>
+                  <input type="submit" name="" id="" value="Get Weather">
+              </form>
             </div>
           </div>
           

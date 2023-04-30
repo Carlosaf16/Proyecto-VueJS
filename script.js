@@ -46,77 +46,87 @@ function openCity(cityName, elmnt, color) {
 document.getElementById("defaultOpen").click();
 
 //TIEMPOOOOOOOO
+const result = document.querySelector('.result');
+const form = document.querySelector('.get-weather');
+const nameCity = document.querySelector('#city');
+const nameCountry = document.querySelector('#country');
 
-const tarjeta = document.querySelector('.tarjeta');
-const buscadorTiempo = document.querySelector('.buscador-tiempo button');
-const cajaTiempo = document.querySelector('.caja-tiempo');
-const detallesTiempo = document.querySelector('.weather-details');
-const error404 = document.querySelector('.no-encontrado');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-search.addEventListener('click', () => {
-
-  const APIKey = '728b0ee6df5687559812bd3169ad77b7';
-  const ciudad = document.querySelector('.buscador-tiempo input').value;
-
-  if (ciudad === '')
-    return;
-
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&appid=${APIKey}`)
-    .then(response => response.json())
-    .then(json => {
-
-      if (json.cod === '404') {
-        tarjeta.style.height = '400px';
-        cajaTiempo.style.display = 'none';
-        detallesTiempo.style.display = 'none';
-        error404.style.display = 'block';
-        error404.classList.add('fadeIn');
+    if (nameCity.value === '' || nameCountry.value === '') {
+        showError('Ambos campos son obligatorios...');
         return;
-      }
+    }
 
-      error404.style.display = 'none';
-      error404.classList.remove('fadeIn');
+    callAPI(nameCity.value, nameCountry.value);
+    //console.log(nameCity.value);
+    //console.log(nameCountry.value);
+})
 
-      const imagen = document.querySelector('.caja-tiempo img');
-      const temperatura = document.querySelector('.caja-tiempo .temperatura');
-      const descripcion = document.querySelector('.caja-tiempo .descripcion');
-      const humedad = document.querySelector('.weather-details .humedad span');
-      const viento = document.querySelector('.weather-details .viento span');
+function callAPI(city, country){
+    const apiId = '41d1d7f5c2475b3a16167b30bc4f265c';
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiId}`;
 
-      switch (json.weather[0].main) {
-        case 'Clear':
-          image.src = 'images/clear.png';
-          break;
+    fetch(url)
+        .then(data => {
+            return data.json();
+        })
+        .then(dataJSON => {
+            if (dataJSON.cod === '404') {
+                showError('Ciudad no encontrada...');
+            } else {
+                clearHTML();
+                showWeather(dataJSON);
+            }
+            //console.log(dataJSON);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
 
-        case 'Rain':
-          image.src = 'images/rain.png';
-          break;
+function showWeather(data){
+    const {name, main:{temp, temp_min, temp_max}, weather:[arr]} = data;
 
-        case 'Snow':
-          image.src = 'images/snow.png';
-          break;
+    const degrees = kelvinToCentigrade(temp);
+    const min = kelvinToCentigrade(temp_min);
+    const max = kelvinToCentigrade(temp_max);
 
-        case 'Clouds':
-          image.src = 'images/cloud.png';
-          break;
+    const content = document.createElement('div');
+    content.innerHTML = `
+        <h5>Clima en ${name}</h5>
+        <img src="https://openweathermap.org/img/wn/${arr.icon}@2x.png" alt="icon">
+        <h2>${degrees}°C</h2>
+        <p>Max: ${max}°C</p>
+        <p>Min: ${min}°C</p>
+    `;
 
-        case 'Haze':
-          image.src = 'images/mist.png';
-          break;
+    result.appendChild(content);
 
-        default:
-          image.src = '';
-      }
+    /* console.log(name);
+    console.log(temp);
+    console.log(temp_max);
+    console.log(temp_min);
+    console.log(arr.icon); */
+}
 
-      temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
-      descripcion.innerHTML = `${json.weather[0].descripcion}`;
-      humedad.innerHTML = `${json.main.humedad}%`;
-      viento.innerHTML = `${parseInt(json.viento.speed)}Km/h`;
+function showError(message){
+    //console.log(message);
+    const alert = document.createElement('p');
+    alert.classList.add('alert-message');
+    alert.innerHTML = message;
 
-      cajaTiempo.style.display = '';
-      detallesTiempo.style.display = '';
-      cajaTiempo.classList.add('fadeIn');
-      detallesTiempo.classList.add('fadeIn');
-      tarjeta.style.height = '590px';
-    });
-});
+    form.appendChild(alert);
+    setTimeout(() => {
+        alert.remove();
+    }, 3000);
+}
+
+function kelvinToCentigrade(temp){
+    return parseInt(temp - 273.15);
+}
+
+function clearHTML(){
+    result.innerHTML = '';
+}
