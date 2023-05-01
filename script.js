@@ -104,11 +104,6 @@ function showWeather(data){
 
     result.appendChild(content);
 
-    /* console.log(name);
-    console.log(temp);
-    console.log(temp_max);
-    console.log(temp_min);
-    console.log(arr.icon); */
 }
 
 function showError(message){
@@ -130,3 +125,28 @@ function kelvinToCentigrade(temp){
 function clearHTML(){
     result.innerHTML = '';
 }
+
+// Esta sección se utiliza para agregar interactividad al chat
+// mediante el uso de JavaScript. Sin embargo, como se mencionó
+// al principio, este ejemplo no incluye funcionalidad real.
+
+// Selección de elementos del DOM
+const chatForm = document.querySelector('.chat-form');
+const chatInput = document.querySelector('.chat-input');
+const chatMessages = document.querySelector('.chat-messages');
+
+// Función para agregar un mensaje al chat
+function addMessage(message) {
+  const div = document.createElement('div');
+  div.classList.add('message');
+  div.innerHTML = `<p>${message}</p>`;
+  chatMessages.appendChild(div);
+}
+
+// Escucha del envío del formulario
+chatForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const message = chatInput.value;
+  addMessage(message);
+  chatInput.value = '';
+});
