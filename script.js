@@ -1,4 +1,5 @@
 /* ESTO ESTA EN JS BASICO LO TENGO QUE PASAR A VUEJS */
+
 const body = document.querySelector("body"),
   sidebar = body.querySelector(".sidebar"),
   toggle = body.querySelector(".toggle"),
@@ -19,7 +20,21 @@ modoSwitch.addEventListener("click", () => {
   else {
     modoTexto.innerHTML = "Modo<br>Oscuro";
   }
+
+  // Guardar el estado del switch en el almacenamiento local
+  localStorage.setItem("modoOscuro", body.classList.contains("oscuro"));
 });
+
+// Verificar el estado del switch almacenado en el almacenamiento local
+window.addEventListener("load", () => {
+  const modoOscuro = localStorage.getItem("modoOscuro");
+
+  if (modoOscuro) {
+    body.classList.add("oscuro");
+    modoTexto.innerText = "Modo Claro";
+  }
+});
+
 
 function openCity(cityName, elmnt, color) {
   // Hide all elements with class="tabcontent" by default */
