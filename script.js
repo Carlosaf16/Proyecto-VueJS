@@ -48,4 +48,9 @@ const body = document.querySelector("body"),
 
       /*------------------Cards------------------*/
       
-      
+      document.getElementById('play-button').addEventListener('click', function(){
+        var icon = document.getElementById('icon');
+        icon.classList.toggle('bx bx-heart heart1');
+        icon.classList.toggle('bx bxs-heart heart');
+      });
+

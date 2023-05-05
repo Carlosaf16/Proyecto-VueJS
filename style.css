@@ -15,6 +15,7 @@
     --primary-color-light:#F6F5FF;
     --toggle-color:#DDD;
     --text-color:#707070;
+    --text-color-favoritos:black;
     
     /*------------TRANSICIONES-------------*/
     --tran-02: all 0.2s ease;
@@ -46,6 +47,7 @@ body.oscuro{
     --primary-color-light:rgba(84,84,84,255);
     --toggle-color:#FFF;
     --text-color:#FFF;
+    --text-color-favoritos:#FFF;
 }
 
 .sidebar.cerrar header .toggle{
@@ -369,10 +371,206 @@ body.oscuro .switch::before{
 
 /*------------Cards---------------*/
 
+.title{
+    margin-left: 325px;
+    font-size: xx-large;
+    color: var(--text-color);
+}
+
+.title-line{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-right: 250px;
+}
+
 .vcard{
-    width: 30%;
+    width: 80%;
+    height: min-content;
     margin-top: 2%;
     margin-left: 20%;
     margin-right: 3%;
     margin-bottom: 3%;
+    background-color: var(--body-color);
+    transition: var(--tran-04);
+}
+
+.cards{
+    
+}
+
+.card1{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card2{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card3{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card4{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card5{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card6{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card7{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card1,.card2,.card3,.card4,.card5,.card6,.card7{
+    margin-left: 1%;
+    margin-bottom: 2%;
+    display: inline-block;
+    vertical-align: top;
+    padding: auto;
+}
+
+.card-img1{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img2{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img3{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img4{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img5{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img6{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img7{
+    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-body{
+    padding: 15px;
+}
+
+.card-title{
+    font-weight: 700;
+    color: var(--text-color-favoritos);
+}
+
+.card-title-content{
+    color: var(--text-color);
+}
+
+.km{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    color: var(--text-color-favoritos);
+}
+
+.h{
+    border: none;
+    font-size: larger;
+    background: none;
+    
+}
+
+.heart{
+    color: red;
+}
+
+.heart1{
+    color: black;
 }
