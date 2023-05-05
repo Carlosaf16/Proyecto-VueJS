@@ -504,8 +504,6 @@ form input[type="submit"]:hover{
 }
 
 /*----------------------PERFIL-------------------------------*/
-
-
 .perfil {
     display: flex;
     flex-direction: column;
