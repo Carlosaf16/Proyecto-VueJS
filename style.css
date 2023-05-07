@@ -504,58 +504,124 @@ form input[type="submit"]:hover{
 }
 
 /*----------------------PERFIL-------------------------------*/
-.perfil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+
+.perfil{
     margin-top: 15px;
     position:relative;
     left: 325px;
-    width: 1400px;
+    width: calc(100% -250px);
     transform: var(--tran-05);
-  }
+}
+
+.sidebar.cerrar ~.perfil{
+    left: 88px;
+    width: calc(100% -88px);
+}
+
+.perfil .banner-perfil {
+    width: 73.6%;
+    /*min-width: 1400px;*/
+    background: var(--sidebar-color);
+    border-radius: 6px;
+    height: 250px;
+}
+
+.profile-image-container {
+    position: relative;
+    bottom: -120px;
+    left: 9px;
+    background-color: none;
+}
   
-  .avatar {
-    width: 150px;
-    height: 150px;
-    background-image: url('ruta-a-la-imagen');
-    background-size: cover;
-    background-position: center;
+.profile-image {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 20px;
-  }
+}
+
+.profile-info {
+    position: absolute;
+    bottom: 0;
+    left: 145px;
+    margin-bottom: 45px;
+    color: var(--text-color);
+}
   
-  .nombre {
-    margin: 0;
+.profile-name {
     font-size: 24px;
-    font-weight: bold;
-    text-align: center;
+    margin: 0;
+}
+  
+.profile-description {
+    font-size: 16px;
+    margin: 0;
+}
+
+.profile-details{
+    margin-top: 20px;
+    position:relative;
+    left: 325px;
+    width: calc(100% -250px);
+    transform: var(--tran-05);
+}
+
+.sidebar.cerrar ~.profile-details{
+    left: 88px;
+    width: calc(100% -88px);
+}
+
+.profile-details .cont {
+    width: 73.6%;
+    /*min-width: 1400px;*/
+    background: var(--sidebar-color);
+    border-radius: 6px;
+    height: auto;
+    color: var(--text-color);
+    padding: 15px 15px 15px 15px;
+}
+
+.section-title {
+    font-size: 20px;
     margin-bottom: 10px;
   }
   
-  .correo {
-    margin: 0;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
   
-  .editar {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    background-color: #6c63ff;
+label {
+    font-size: 16px;
+}
+  
+input[type="text-perfil"],
+input[type="email"],
+input[type="tel"] {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 6px;
+}
+  
+button[type="submit"] {
+    background-color: #007bff;
     color: #fff;
-    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .editar:hover {
-    background-color: #5248c7;
-  }
-  
+    width: 45%;
+    margin-left: 45px;
+}
+
+button[type="submit"]:hover{
+    background: #085ebb;
+}
+
+.borrar, .guardar{
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: auto;
+}

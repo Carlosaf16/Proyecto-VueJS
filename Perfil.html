@@ -90,11 +90,36 @@
       </div>
     </nav>
     <section>
-      <div class="perfil">
-        <div class="avatar"></div>
-        <h2 class="nombre">Nombre Apellido</h2>
-        <p class="correo">correo@correo.com</p>
-        <button class="editar">Editar perfil</button>
+       <div class="perfil">
+          <div class="banner-perfil">
+            <div class="profile-image-container">
+              <img class="profile-image" src="IMAGENES/images.png" alt="Profile Image">
+              
+            </div>
+            <div class="profile-info">
+              <h1 class="profile-name">Nombre de usuario</h1>
+              <p class="profile-description">Descripción del usuario</p>
+            </div>
+          </div>
+       </div>
+       <div class="profile-details">
+        <div class="cont">
+          <h2 class="section-title">Informaci&oacute;n de la cuenta</h2>
+          <form class="profile-form">
+            <label for="real-name">Nombre en pantalla:</label>
+            <input type="text-perfil" id="real-name" name="real-name" value="Nombre">
+            <label for="email">Correo electr&oacute;nico:</label>
+            <input type="email" id="email" name="email" value="usuario@correo.com">
+            <h2 class="section-title">Informaci&oacute;n personal</h2>
+            <label for="real-name">Nombre:</label>
+            <input type="text-perfil" id="real-name" name="real-name" value="Nombre">
+            <label for="real-name">Apellidos:</label>
+            <input type="text-perfil" id="real-name" name="real-name" value="Apellidos">
+            <label for="phone">N&uacute;mero de tel&eacute;fono:</label>
+            <input type="tel" id="phone" name="phone" value="123456789">
+          </form>
+          <button class="borrar" type="submit">Borrar cambios</button><button class="grardar" type="submit">Guardar cambios</button>
+        </div>
       </div>
     </section>
     <script src="script.js"></script>
