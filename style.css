@@ -334,9 +334,9 @@ body.oscuro .switch::before{
     height: 73.8%;
     width: 65%;
     margin-left: 20%;
-    margin-top: 5%;
+    margin-top: 7%;
     margin-right: 20%;
-    margin-bottom: 50px;
+    margin-bottom: 129px;
     border-radius: 20px
   }
 html,
@@ -428,4 +428,3 @@ body {
     transform: scale(1.1);
     border-color: rgba(0, 0, 0, 0.1);
   }
-  

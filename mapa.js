@@ -2,7 +2,7 @@ window.initMap = initMap;
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8.5,
+    zoom: 8,
     center: { lat: 40.53815385953011,  lng: -4.507365836580444 },
   });
 
@@ -63,7 +63,7 @@ function scrollUp() {
 
     var currentScroll = document.documentElement.scrollTop;
 
-    if (currentScroll >= 3) {
+    if (currentScroll >= 1) {
         window.requestAnimationFrame(scrollUp);
         window.scrollTo(0, currentScroll - (currentScroll / 12));
 
@@ -81,3 +81,4 @@ window.onscroll = function () {
     }
 
 };
+
