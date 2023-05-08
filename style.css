@@ -371,6 +371,7 @@ body {
     margin: 20px;
   }
   #fotoMap5 {
+    
     width: 70%;
     margin: 20px;
   }
@@ -428,3 +429,24 @@ body {
     transform: scale(1.1);
     border-color: rgba(0, 0, 0, 0.1);
   }
+#stats{
+    margin-left: 13.5%;
+    margin-right: 12.8%;
+    margin-top: 3%;
+    color: var(--text-color);
+    justify-content: center;
+}
+#refresh{
+    border-radius: 5px;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+#graficas{
+margin-right: 13.5;
+width: 1500px;
+height: 750px;
+border-radius: 50px
+
+}
