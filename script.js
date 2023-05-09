@@ -165,3 +165,4 @@ chatForm.addEventListener('submit', (e) => {
   addMessage(message);
   chatInput.value = '';
 });
+
