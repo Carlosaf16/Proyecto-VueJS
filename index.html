@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIKERS</title>
+    <title>Vite App</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="">
-    <link rel="shortcut icon" href="IMAGENES/favicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
@@ -96,76 +93,54 @@
       <div class="inicio">
         <img src="IMAGENES/banner.png" alt="banner" class="banner">
         <div class="contenerdor">
-          <button class="tablink" onclick="openCity('Noticias')" id="defaultOpen">Noticias</button>
-          <button class="tablink" onclick="openCity('Tiempo')">Tiempo</button>
-          <button class="tablink" onclick="openCity('Comunidad')">Comunidad</button>
+          <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Noticias</button>
+          <button class="tablink" onclick="openCity('Paris', this, 'green')">Tiempo</button>
+          <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Comunidad</button>
+          <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Amigos</button>
 
           <div id="Noticias" class="tabcontent">
-            <div class="texto">
-              <div class="n1">
-                  <h1 class="titulo">Ayuso, tras siete meses desaparecido, regresa en Romand&iacute;a porque necesita "sentirse ciclista"</h1>
-                  <p class="n1_texto">El joven y talentoso corredor, tras superar una extra ntilde;a tendinitis, debutar&aacute; el pr&oacute;ximo 25 de abril en la ronda suiza. No compite desde la &uacute;ltima Vuelta a Espa&ntilde;a.</p>
-                  <img src="IMAGENES/n1.png" width="400px">
-                  <p><a href="https://www.elmundo.es/deportes/ciclismo/2023/04/20/644144f6fc6c8387068b458a.html" target="_blank">Noticia completa</a></p>
-              </div>
-              <div class="n2">
-                <h1 class="titulo">El tuit de la DGT que indigna al mundo del ciclismo y agita las redes</h1>
-                <p class="n1_texto">El famoso tuit de la DGT, bajo el hashtag #TestDGT, ha suscitado cr&iacute;ticas de la comunidad por utilizar una pregunta tipo test para preguntar si es necesario tener precauci&oacute;n al adelantar a un grupo de ciclistas en largas distancias cuesta arriba.</p>
-                <img src="IMAGENES/n2.png" width="305px">
-                <p><a href="https://www.ultimahora.es/noticias/nacional/2023/03/29/1908793/ciclismo-tuit-polemico-dgt.html" target="_blank">Noticia completa</a></p>
-              </div>
-              <div class="n3">
-                <h1 class="titulo">As&iacute; es la subida m&aacute;s dura del mundo: "No he visto nada igual"</h1>
-                <p class="n1_texto">La Malga Palazzo-Scanuppia, en Italia, es la ascensi&oacute;n m&aacute;s dura del mundo con rampas de hasta el 45%. As&iacute; lo ha vivido un exciclista profesional.</p>
-                <img src="IMAGENES/n3.PNG" width="334px">
-                <p><a href="https://www.antena3.com/noticias/deportes/ciclismo/asi-subida-mas-dura-mundo-visto-nada-igual_20220828630b975c1d9fe00001bfa75b.html" target="_blank">Noticia completa</a></p>
-              </div>
-            </div>
+            <h1>Noticias</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.</p>
           </div>
-          
+
           <div id="Tiempo" class="tabcontent">
-            <div class="weather-content">
-              <h1>Buscador del Tiempo</h1>
-              <div class="result">
-              </div>
-              <form action="" method="POST" class="get-weather">
-                  <input type="text" name="city" id="city" placeholder="Introuzca su ciudad...">
-                  <select name="" id="country">
-                      <option disabled selected value="">Seleccione el pa&iacute;s</option>
-                      <option value="AD">Andorra</option>
-                      <option value="AR">Argentina</option>
-                      <option value="CR">Costa Rica</option>
-                      <option value="ES">Espa&ntilde;a</option>
-                      <option value="US">Estados Unidos</option>
-                      <option value="FR">Francia</option>
-                      <option value="IT">Italia</option>
-                  </select>
-                  <input type="submit" name="" id="" value="Buscar">
-              </form>
-            </div>
+            <h1>Tiempo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.</p>
           </div>
 
           <div id="Comunidad" class="tabcontent">
-            <div class="chat-container">
-              <div class="chat-messages">
-                <!-- Aquí se mostrarían los mensajes del chat -->
-              </div>
-              <form class="chat-form">
-                <input type="text" class="chat-input" placeholder="Escriba su mensaje...">
-                <button type="submit" class='bx bx-send enviar'></i> Enviar</button>
-              </form>
-            </div>
-                    
+            <h1>Comunidad</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.</p>
+          </div>
+
+          <div id="Amigos" class="tabcontent">
+            <h1>Amigos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Magnam facilis minus voluptas eveniet perferendis exercitationem repellat asperiores quam? 
+              Vitae, dolor repellendus neque ipsa minima odio voluptatibus debitis quam quasi culpa.</p>
           </div>
         </div>
       </div>
     </section>
-    <div id="button-up">
-      <i class="fas fa-chevron-up"></i>
-    </div>
     <script src="script.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="/src/main.ts"></script>
-    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
   </body>
 </html>
