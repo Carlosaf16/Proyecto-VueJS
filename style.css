@@ -372,9 +372,9 @@ body.oscuro .switch::before{
 /*------------Cards---------------*/
 
 .title{
-    margin-left: 325px;
     font-size: xx-large;
     color: var(--text-color);
+    text-align: center;
 }
 
 .title-line{
@@ -455,7 +455,16 @@ body.oscuro .switch::before{
     overflow: hidden;
 }
 
-.card1,.card2,.card3,.card4,.card5,.card6,.card7{
+.card8{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
     margin-left: 1%;
     margin-bottom: 2%;
     display: inline-block;
@@ -540,6 +549,22 @@ body.oscuro .switch::before{
     border-top-left-radius: 1em;
 }
 
+.card-img8{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.im8{
+    padding-left: 35%;
+    padding-top: 20%;
+    font-size: 100px;
+}
+
 .card-body{
     padding: 15px;
 }
@@ -599,28 +624,28 @@ body.oscuro .switch::before{
 
 .nome{
     font-size: larger;
-    color: var(--text-color-favoritos);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
 }
 
 .apes{
     font-size: larger;
-    color: var(--text-color-favoritos);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
 }
 
 .email{
     font-size: larger;
-    color: var(--text-color-favoritos);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
 }
 
 .nume{
     font-size: larger;
-    color: var(--text-color-favoritos);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
 }
@@ -632,7 +657,7 @@ body.oscuro .switch::before{
 
 .comentario{
     font-size: larger;
-    color: var(--text-color-favoritos);
+    color: var(--text-color);
 }
 
 .comentar{
