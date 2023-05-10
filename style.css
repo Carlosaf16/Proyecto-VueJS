@@ -464,7 +464,7 @@ body.oscuro .switch::before{
 }
 
 .card-img1{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/Abantos.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -475,7 +475,7 @@ body.oscuro .switch::before{
 }
 
 .card-img2{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/Mijares.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -486,7 +486,7 @@ body.oscuro .switch::before{
 }
 
 .card-img3{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/MoralzarzalCiclismo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -497,7 +497,7 @@ body.oscuro .switch::before{
 }
 
 .card-img4{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/MorcueraNavacerrada.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -508,7 +508,7 @@ body.oscuro .switch::before{
 }
 
 .card-img5{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/NavacerradaMorcuera.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -519,7 +519,7 @@ body.oscuro .switch::before{
 }
 
 .card-img6{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/PeñaNegra.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -530,7 +530,7 @@ body.oscuro .switch::before{
 }
 
 .card-img7{
-    background-image: url('../Proyecto-VueJS/IMAGENES/Bikers.png');
+    background-image: url('../Proyecto-VueJS/fotos-mini/PlatGredos.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -573,4 +573,91 @@ body.oscuro .switch::before{
 
 .heart1{
     color: black;
+}
+
+/*-----Formulario-------*/
+
+.formulario{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 25%;
+    margin-right: 20%;
+    width: 50%;
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: larger;
+    padding-left: 150px;
+}
+
+.form-title{
+    width: 20%;
+    margin-left: 40%;
+    padding-top: 20px;
+    color: var(--text-color-favoritos);
+}
+
+.nome{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+}
+
+.apes{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+}
+
+.email{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+}
+
+.nume{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+}
+
+.name{
+    font-size: larger;
+}
+
+.nome,.apes{
+    margin-left: 1%;
+    margin-bottom: 2%;
+    display: inline-block;
+    vertical-align: top;
+    padding: auto;
+}
+
+.email,.nume{
+    margin-left: 1%;
+    margin-bottom: 2%;
+    display: inline-block;
+    vertical-align: top;
+    padding: auto;
+}
+
+.comentario{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+    width: 100%;
+}
+
+.comentar{
+    width: 69%;
+    height: 100px;
+}
+
+.envio{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+    width: 100%;
+    padding-bottom: 25px;
+    padding-top: 50px;
+}
+
+.enviar{
+    width: 15%;
+    height: 35px;
+    margin-left: 55%;
+    
 }
