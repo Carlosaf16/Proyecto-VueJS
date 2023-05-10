@@ -681,6 +681,22 @@ input[type="tel"] {
     background: #085ebb;
 }
 
+.cont button[type="reset"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    width: 45%;
+    margin-left: 45px;
+}
+
+.cont button[type="reset"]:hover{
+    background: #085ebb;
+}
+
 .borrar, .guardar{
     margin-top: 15px;
     display: inline-block;
