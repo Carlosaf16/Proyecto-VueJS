@@ -1,11 +1,11 @@
 /* ESTO ESTA EN JS BASICO LO TENGO QUE PASAR A VUEJS */
 
-const body = document.querySelector("body"),
-  sidebar = body.querySelector(".sidebar"),
-  toggle = body.querySelector(".toggle"),
-  botonBuscar = body.querySelector(".buscador"),
-  modoSwitch = body.querySelector(".toggle-switch"),
-  modoTexto = body.querySelector(".texto-modo");
+const body = document.querySelector("body");
+const sidebar = body.querySelector(".sidebar");
+const toggle = body.querySelector(".toggle");
+const botonBuscar = body.querySelector(".buscador");
+const modoSwitch = body.querySelector(".toggle-switch");
+const modoTexto = body.querySelector(".texto-modo");
 
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("cerrar");
@@ -16,9 +16,11 @@ modoSwitch.addEventListener("click", () => {
 
   if (body.classList.contains("oscuro")) {
     modoTexto.innerText = "Modo Claro";
+    document.querySelectorAll("*").forEach(element => element.classList.add("oscuro"));
   }
   else {
     modoTexto.innerHTML = "Modo<br>Oscuro";
+    document.querySelectorAll("*").forEach(element => element.classList.remove("oscuro"));
   }
 
   // Guardar el estado del switch en el almacenamiento local
@@ -32,8 +34,10 @@ window.addEventListener("load", () => {
   if (modoOscuro) {
     body.classList.add("oscuro");
     modoTexto.innerText = "Modo Claro";
+    document.querySelectorAll("*").forEach(element => element.classList.add("oscuro"));
   }
 });
+
 
 
 function openCity(cityName, elmnt, color) {
@@ -166,3 +170,28 @@ chatForm.addEventListener('submit', (e) => {
   chatInput.value = '';
 });
 
+
+//BOTON SUBIR
+document.getElementById("button-up").addEventListener("click", scrollUp);
+function scrollUp() {
+
+    var currentScroll = document.documentElement.scrollTop;
+
+    if (currentScroll >= 3) {
+        window.requestAnimationFrame(scrollUp);
+        window.scrollTo(0, currentScroll - (currentScroll / 2));
+
+    }
+}
+buttonUp = document.getElementById("button-up");
+window.onscroll = function () {
+
+    var scroll = document.documentElement.scrollTop;
+
+    if (scroll > 150) {
+        buttonUp.style.transform = "scale(1)";
+    } else if (scroll < 150) {
+        buttonUp.style.transform = "scale(0)";
+    }
+
+};
