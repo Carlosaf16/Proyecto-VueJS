@@ -413,7 +413,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--body-color);
+    color: var(--text-color);
     font-size: 20px;
     position: fixed;
     bottom: 50px;
