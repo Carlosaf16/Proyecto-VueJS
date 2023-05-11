@@ -1,5 +1,3 @@
-/* ESTO ESTA EN JS BASICO LO TENGO QUE PASAR A VUEJS */
-
 const body = document.querySelector("body");
 const sidebar = body.querySelector(".sidebar");
 const toggle = body.querySelector(".toggle");
@@ -23,11 +21,9 @@ modoSwitch.addEventListener("click", () => {
     document.querySelectorAll("*").forEach(element => element.classList.remove("oscuro"));
   }
 
-  // Guardar el estado del switch en el almacenamiento local
   localStorage.setItem("modoOscuro", body.classList.contains("oscuro"));
 });
 
-// Verificar el estado del switch almacenado en el almacenamiento local
 window.addEventListener("load", () => {
   const modoOscuro = localStorage.getItem("modoOscuro");
 
@@ -38,33 +34,25 @@ window.addEventListener("load", () => {
   }
 });
 
-
-
 function openCity(cityName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Remove the background color of all tablinks/buttons
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
   }
 
-  // Show the specific tab content
   document.getElementById(cityName).style.display = "block";
 
-  // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
 
-// Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-//TIEMPOOOOOOOO
 const result = document.querySelector('.result');
 const form = document.querySelector('.get-weather');
 const nameCity = document.querySelector('#city');
@@ -145,16 +133,10 @@ function clearHTML(){
     result.innerHTML = '';
 }
 
-// Esta sección se utiliza para agregar interactividad al chat
-// mediante el uso de JavaScript. Sin embargo, como se mencionó
-// al principio, este ejemplo no incluye funcionalidad real.
-
-// Selección de elementos del DOM
 const chatForm = document.querySelector('.chat-form');
 const chatInput = document.querySelector('.chat-input');
 const chatMessages = document.querySelector('.chat-messages');
 
-// Función para agregar un mensaje al chat
 function addMessage(message) {
   const div = document.createElement('div');
   div.classList.add('message');
@@ -162,7 +144,6 @@ function addMessage(message) {
   chatMessages.appendChild(div);
 }
 
-// Escucha del envío del formulario
 chatForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const message = chatInput.value;
@@ -171,7 +152,6 @@ chatForm.addEventListener('submit', (e) => {
 });
 
 
-//BOTON SUBIR
 document.getElementById("button-up").addEventListener("click", scrollUp);
 function scrollUp() {
 
@@ -183,6 +163,7 @@ function scrollUp() {
 
     }
 }
+
 buttonUp = document.getElementById("button-up");
 window.onscroll = function () {
 
