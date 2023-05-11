@@ -7,7 +7,9 @@
     <title>BIKERS/Perfil</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="">
     <link rel="shortcut icon" href="IMAGENES/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <nav class="sidebar cerrar">
@@ -122,12 +124,13 @@
             <label for="phone">N&uacute;mero de tel&eacute;fono:</label>
             <input type="tel" id="phone" name="phone" value="123456789">
           </form>
-          <button class="borrar" type="reset">Borrar cambios</button>
+          <button class="borrar" type="reset" onClick="refrescarPagina()">Borrar cambios</button>
           <button class="guardar" type="submit">Guardar cambios</button>
         </div>               
       </div>
     </section>
     <script src="script.js"></script>
+    <script src="mapa.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
