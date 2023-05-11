@@ -16,6 +16,9 @@
     --toggle-color:#DDD;
     --text-color:#707070;
     --banner-color:#fbfaff;
+    --text-color-favoritos:black;
+    --link-color:rgb(0, 108, 141);
+
     
     /*------------TRANSICIONES-------------*/
     --tran-02: all 0.2s ease;
@@ -49,6 +52,9 @@ body.oscuro{
     --toggle-color:#FFF;
     --text-color:#FFF;
     --banner-color:rgb(112, 112, 112);
+    --text-color-favoritos:#FFF;
+    --link-color:rgb(17, 143, 182);
+
 }
 
 .sidebar.cerrar header .toggle{
@@ -280,6 +286,7 @@ body.oscuro .switch::before{
     left: 325px;
     width: calc(100% -250px);
     transform: var(--tran-05);
+    padding-bottom: 15px;
 }
 
 .sidebar.cerrar ~.inicio{
@@ -492,7 +499,7 @@ form input[type="submit"]:hover{
     border: none;
 }
   
-.chat-form button {
+.chat-form .enviar {
     background-color: #14d4a5;
     height: 50px;
     border: none;
@@ -703,3 +710,490 @@ input[type="tel"] {
     vertical-align: bottom;
     padding: auto;
 }
+
+
+
+/*************************************************************************************************************************************************************************************/
+
+#map {
+    height: 73.8%;
+    width: 65%;
+    margin-left: 20%;
+    margin-top: 7%;
+    margin-right: 20%;
+    margin-bottom: 129px;
+    border-radius: 20px
+  }
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+}
+.contenedor-fotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
+    
+
+   
+  }
+  #fotoMap1 {
+    width: 70%;
+    margin: 20px;
+  }
+  #fotoMap2 {
+    width: 70%;
+    margin: 20px;
+  }
+  #fotoMap3 {
+    width: 70%;
+    margin: 20px;
+  }
+  #fotoMap4 {
+    width: 70%;
+    margin: 20px;
+  }
+  #fotoMap5 {
+    
+    width: 70%;
+    margin: 20px;
+  }
+  #fotoMap6 {
+    width: 70%;
+    margin: 20px;
+  }
+  #fotoMap7 {
+    width: 70%;
+    margin: 20px;
+  }
+  
+  .contenedor-fotos > div {
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--sidebar-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  .contenedor-fotos > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contenedor-fotos > div img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  #button-up {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--sidebar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+    z-index: 400;
+  }
+  
+  #button-up:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+#stats{
+    margin-left: 13.5%;
+    margin-right: 12.8%;
+    margin-top: 3%;
+    color: var(--text-color);
+    justify-content: center;
+}
+#refresh{
+    border-radius: 5px;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+}
+#graficas{
+margin-right: 13.5;
+width: 100%;
+height: 600px;
+border-radius: 20px
+
+}
+.stat{
+    color: var(--link-color);
+}
+
+
+/*------------Cards---------------*/
+
+.title{
+    font-size: xx-large;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.title-line{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-right: 250px;
+}
+
+.vcard{
+    width: 80%;
+    height: min-content;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    background-color: var(--body-color);
+    transition: var(--tran-04);
+}
+
+.card1{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card2{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card3{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card4{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card5{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card6{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card7{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+.card8{
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: 1em;
+    width: 25%;
+    overflow: hidden;
+}
+
+
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
+    margin-left: 1%;
+    margin-bottom: 2%;
+    display: inline-block;
+    vertical-align: top;
+    padding: auto;
+}
+
+.card-img1{
+    background-image: url('../ProyectoVueFinal/fotos-mini/Abantos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img2{
+    background-image: url('../ProyectoVueFinal/fotos-mini/Mijares.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img3{
+    background-image: url('../ProyectoVueFinal/fotos-mini/MoralzarzalCiclismo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img4{
+    background-image: url('../ProyectoVueFinal/fotos-mini/MorcueraNavacerrada.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img5{
+    background-image: url('../ProyectoVueFinal/fotos-mini/NavacerradaMorcuera.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img6{
+    background-image: url('../ProyectoVueFinal/fotos-mini/PeñaNegra.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img7{
+    background-image: url('../ProyectoVueFinal/fotos-mini/PlatGredos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card-img8{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    color: var(--text-color-favoritos);
+}
+
+.im8{
+    padding-left: 35%;
+    padding-top: 20%;
+    font-size: 100px;
+}
+
+.card-body{
+    padding: 15px;
+}
+
+.card-title{
+    font-weight: 700;
+    color: var(--text-color-favoritos);
+}
+
+.card-title-content{
+    color: var(--text-color);
+}
+
+.km{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    color: var(--text-color-favoritos);
+}
+
+.h{
+    border: none;
+    font-size: larger;
+    background: none;
+    
+}
+
+.heart{
+    color: red;
+}
+
+.heart1{
+    color: var(--text-color-favoritos);
+}
+
+/*-----Formulario-------*/
+
+.formulario{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    width: 60%;
+    background-color: var(--sidebar-color);
+    border-radius: 1em;
+    font-size: larger;
+    padding-left: 125px;
+    padding-right: 75px;
+}
+
+.form-title{
+    width: 20%;
+    margin-left: 30%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: var(--text-color-favoritos);
+}
+
+.nome{
+    font-size: larger;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.apes{
+    font-size: larger;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.email{
+    font-size: larger;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.nume{
+    font-size: larger;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    font-size: larger;
+    border-radius: 6px;
+}
+
+.comentario{
+    font-size: larger;
+    color: var(--text-color);
+}
+
+.comentar{
+    width: 69%;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.envio{
+    font-size: larger;
+    color: var(--text-color-favoritos);
+    width: 100%;
+    padding-bottom: 25px;
+    padding-top: 50px;
+    background-color: var(--sidebar-color);
+}
+
+.enviar1{
+    width: 25%;
+    height: 50px;
+    margin-left: 35%;
+    background-color: #14d4a5;
+    color: var(--text-color-favoritos);
+    border: none;
+    border-radius: 6px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.enviar:hover{
+    width: 100%;
+    background-color: #14d4a5;
+}
+
+.logos{
+    margin-top: 7%;
+    margin-right: 10%;
+}
+
+.logos a{
+    font-size: 45px;
+    color: var(--text-color-favoritos);
+    margin-right: 25%;
+}
+
+.logos,.formulario{
+    margin-left: 1%;
+    margin-bottom: 2%;
+    display: inline-block;
+    vertical-align: top;
+    padding: auto;
+}
+
+.total{
+    width: 70%;
+    margin-left: 30%;
+}
+
+.con{
+    padding-left: 7%;
+    color: var(--text-color);
+    
+}
+
+.d{
+    font-weight: 700;
+    color: var(--text-color);
+
+}
+
+

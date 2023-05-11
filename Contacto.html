@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>BIKERS/Contacto</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="IMAGENES/favicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
@@ -90,9 +93,58 @@
       </div>
     </nav>
     <section>
-
+      <div class="total">
+        <article class="formulario">
+          <div class="form-1">
+            <div class="form-body">
+              <h2 class="form-title"> Cont&aacute;ctanos </h2>
+              <div class="card-footer">
+                <form>
+                <div class="nome">
+                  Nombre: <br>
+                  <input type="text" class="name">
+                </div>
+                <div class="apes">
+                  Apellido: <br>
+                  <input type="text" class="name">
+                </div>
+                <div class="email">
+                  Email: <br>
+                  <input type="text" class="name">
+                </div>
+                <div class="nume">
+                  N&uacute;mero: <br>
+                  <input type="name" class="name">
+                </div>
+                <div class="comentario">
+                  Comentario: <br>
+                  <textarea class="comentar"></textarea>
+                </div>
+                <div class="envio">
+                  <input   type="button" onClick="refrescarPagina()" value="Enviar" class="enviar1">
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="logos">
+          <a href="https://www.instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://es-es.facebook.com/" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="https://twitter.com/?lang=es" target="_blank"><i class="bx bxl-twitter"></i></a>
+        </div>
+        <article class="formulario">
+          <div class="con">
+            <span class="d">Cont&aacute;ctanos Email:</span> bikers@gmail.com <span class="d">Tel:</span> 918273465
+          </div>
+        </article>
+      </div>
+      <div id="button-up">
+        <i class="fas fa-chevron-up"></i>
+      </div>
     </section>
     <script src="script.js"></script>
+    <script src="mapa.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
