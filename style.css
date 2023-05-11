@@ -941,7 +941,7 @@ border-radius: 20px
 }
 
 .card-img1{
-    background-image: url('../ProyectoVueFinal/fotos-mini/Abantos.png');
+    background-image: url('fotos-mini/Abantos.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -952,7 +952,7 @@ border-radius: 20px
 }
 
 .card-img2{
-    background-image: url('../ProyectoVueFinal/fotos-mini/Mijares.png');
+    background-image: url('fotos-mini/Mijares.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -963,7 +963,7 @@ border-radius: 20px
 }
 
 .card-img3{
-    background-image: url('../ProyectoVueFinal/fotos-mini/MoralzarzalCiclismo.png');
+    background-image: url('fotos-mini/MoralzarzalCiclismo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -974,7 +974,7 @@ border-radius: 20px
 }
 
 .card-img4{
-    background-image: url('../ProyectoVueFinal/fotos-mini/MorcueraNavacerrada.png');
+    background-image: url('fotos-mini/MorcueraNavacerrada.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -985,7 +985,7 @@ border-radius: 20px
 }
 
 .card-img5{
-    background-image: url('../ProyectoVueFinal/fotos-mini/NavacerradaMorcuera.png');
+    background-image: url('fotos-mini/NavacerradaMorcuera.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -996,7 +996,7 @@ border-radius: 20px
 }
 
 .card-img6{
-    background-image: url('../ProyectoVueFinal/fotos-mini/PeñaNegra.png');
+    background-image: url('fotos-mini/PeñaNegra.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1007,7 +1007,7 @@ border-radius: 20px
 }
 
 .card-img7{
-    background-image: url('../ProyectoVueFinal/fotos-mini/PlatGredos.png');
+    background-image: url('fotos-mini/PlatGredos.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
